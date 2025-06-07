@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dia dos Namorados</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Playfair+Display:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="side-text left">
+        <p>AMOR<br />PARA VIDA</p>
+      </div>
+
+      <main>
+        <p class="since">Feliz dia dos Namorados minha Princesa.</p>
+        <h1>
+          <span class="love">Fernando</span> &
+          <span class="love">Ana Julia</span>
+        </h1>
+        <p class="subtitle">Desde 08/09/2024</p>
+      </main>
+
+      <div class="side-text right">
+        <p>AMOR<br />PARA VIDA</p>
+      </div>
+    </div>
+
+    <section class="about-section">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>O calor que me faz arrepiar mais que a brisa fria do inverno</h2>
+          <p>
+            Aposto que você nem imaginava um "presente" assim, né? kkkkk. Tenho
+            mais planos para hoje, mas não convém dizer aqui agora, isso fica
+            pra próxima conversa. Curiosamente, enquanto escrevo, você tá brava
+            comigo porque acha que estou estranho — espero que não termine
+            comigo até quinta, nem nunca por favor.
+          </p>
+          <p>
+            Bom, por que escolhi esse título? Primeiro, porque você mesma deu a
+            ideia na descrição da Bio. Segundo, porque é verdade: você tem um
+            jeito de trazer um <b>calor diferente</b> — não queima, mas aquece
+            minha alma. Um calor que me faz arrepiar mais que o vento gelado do
+            inverno, só porque vem do <b>seu abraço</b>, do <b>seu sorriso</b>,
+            do brilho nos seus olhos quando você ri... e que me deixa
+            <b>ainda mais</b> perdidamente apaixonado.
+          </p>
+          <p>
+            Espero de verdade que esse seja nosso primeiro de muitos outros dias
+            dos namorados, você é quem trouxe um novo sentido para minha vida e
+            é alguém que eu quero conviver até que chegue o fim dela.
+          </p>
+          <p>Eu adoro você. ❤️</p>
+
+          <button id="loveButton" class="love-btn">
+            Clique aqui se me ama
+          </button>
+        </div>
+        <div class="about-gallery">
+          <img src="assets/foto-1.jpg" alt="" />
+          <img src="assets/foto-2.jpg" alt="" />
+          <img src="assets/foto-3.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <div id="lovePopup" class="popup">
+      <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <p>Sabia que você ia clicar. Eu também te amo. ❤️</p>
+      </div>
+    </div>
+
+    <script>
+      const loveButton = document.getElementById("loveButton");
+      const lovePopup = document.getElementById("lovePopup");
+      const closePopup = document.querySelector(".close-popup");
+
+      loveButton.addEventListener("click", () => {
+        lovePopup.style.display = "flex";
+      });
+
+      closePopup.addEventListener("click", () => {
+        lovePopup.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === lovePopup) {
+          lovePopup.style.display = "none";
+        }
+      });
+    </script>
+  </body>
+</html>
